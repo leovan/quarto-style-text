@@ -407,9 +407,9 @@ function latex_style(el, style_text_el_type, global_options)
     local box_shadow = string.format(",fuzzy shadow={%s}{%s}{0em}{%s}{style-text-box-shadow-color!%d}", box_shadow_x_offset, box_shadow_y_offset, box_shadow_blur_radius, box_shadow_opacity)
 
     -- span only options
-    local_box_span_options = ""
+    local box_span_options = ""
     if style_text_el_type == "span" then
-      local_box_span_options = (
+      box_span_options = (
         ",nobeforeafter"
         .. ",on line"
       )
@@ -429,7 +429,7 @@ function latex_style(el, style_text_el_type, global_options)
       .. box_padding_left
       .. box_radius
       .. box_shadow
-      .. local_box_span_options
+      .. box_span_options
       .. "]"
     )
 
