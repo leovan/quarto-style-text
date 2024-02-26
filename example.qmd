@@ -1,0 +1,194 @@
+---
+title: "Quarto Style Text Extension Example"
+abstract: "This is an example document of quarto style text extension."
+filters:
+  - style-text
+format:
+  html:
+    keep-md: true
+    embed-resources: true
+  pdf:
+    keep-tex: true
+---
+
+## Parameters
+
+```{r}
+#| label: parameters
+
+color <- '#00ff00'
+opacity <- 0.8
+font <- 'Times New Roman'
+font_size <- 2
+font_weight <- 'bold'
+font_style <- 'italic'
+box_background_color <- '#d9d9d9'
+box_background_opacity <- 1.0
+box_border_color <- '#000000'
+box_border_opacity <- 1.0
+box_border_style <- 'dashed'
+box_border_width <- 0.1
+box_padding <- 0.4
+box_radius <- 0.4
+box_shadow_color <- '#bfbfbf'
+box_shadow_opacity <- 1.0
+box_shadow_x_offset <- 0.2
+box_shadow_y_offset <- 0.2
+box_shadow_blur_radius <- 0.2
+box_shadow_spread_radius <- 0.1
+text_decoration_line <- 'underline'
+text_decoration_style <- 'dashed'
+text_decoration_color <- '#00ff00'
+text_decoration_thickness <- 0.1
+text_shadow_color <- '#bfbfbf'
+text_shadow_opacity <- 1.0
+text_shadow_x_offset <- 0.1
+text_shadow_y_offset <- 0.1
+text_shadow_blur_radius <- 0.1
+```
+
+## Inline
+
+### Color
+
+Here is [a text]{.style-text color="`{r} color`"}, [an equation $E = m c^2$]{.style-text color="`{r} color`"} and [a code `ls -al`]{.style-text color="`{r} color`"}.
+
+### Opacity
+
+Hear is [a text]{.style-text opacity="`{r} opacity`"}, [an equation $E = m c^2$]{.style-text opacity="`{r} opacity`"} and [a code `ls -al`]{.style-text opacity="`{r} opacity`"}.
+
+### Font
+
+Hear is [a text]{.style-text font="`{r} font`"}, [an equation $E = m c^2$]{.style-text font="`{r} font`"} and [a code `ls -al`]{.style-text font="`{r} font`"}.
+
+### Font size
+
+Hear is [a text]{.style-text font-size="`{r} font_size`"}, [an equation $E = m c^2$]{.style-text font-size="`{r} font_size`"} and [a code `ls -al`]{.style-text font-size="`{r} font_size`"}.
+
+### Font weight
+
+Hear is [a text]{.style-text font-weight="`{r} font_weight`"}, [an equation $E = m c^2$]{.style-text font-weight="`{r} font_weight`"} and [a code `ls -al`]{.style-text font-weight="`{r} font_weight`"}.
+
+### Font style
+
+Hear is [a text]{.style-text font-style="`{r} font_style`"}, [an equation $E = m c^2$]{.style-text font-style="`{r} font_style`"} and [a code `ls -al`]{.style-text font-style="`{r} font_style`"}.
+
+### Box
+
+Hear is [a text]{.style-text  box-background-color="`{r} box_background_color`" box-background-opacity="`{r} box_background_opacity`" box-border-color="`{r} box_border_color`"box-border-opacity="`{r} box_border_opacity`" box-border-style="`{r} box_border_style`" box-border-width="`{r} box_border_width`" box-padding="`{r} box_padding`" box-radius="`{r} box_radius`" box-shadow-color="`{r} box_shadow_color`" box-shadow-opacity="`{r} box_shadow_opacity`" box-shadow-x-offset="`{r} box_shadow_x_offset`" box-shadow-y-offset="`{r} box_shadow_y_offset`" box-shadow-blur-radius="`{r} box_shadow_blur_radius`" box-shadow-spread-radius="`{r} box_shadow_spread_radius`"}, [an equation $E = m c^2$]{.style-text  box-background-color="`{r} box_background_color`" box-background-opacity="`{r} box_background_opacity`" box-border-color="`{r} box_border_color`"box-border-opacity="`{r} box_border_opacity`" box-border-style="`{r} box_border_style`" box-border-width="`{r} box_border_width`" box-padding="`{r} box_padding`" box-radius="`{r} box_radius`" box-shadow-color="`{r} box_shadow_color`" box-shadow-opacity="`{r} box_shadow_opacity`" box-shadow-x-offset="`{r} box_shadow_x_offset`" box-shadow-y-offset="`{r} box_shadow_y_offset`" box-shadow-blur-radius="`{r} box_shadow_blur_radius`" box-shadow-spread-radius="`{r} box_shadow_spread_radius`"} and [a code `ls -al`]{.style-text  box-background-color="`{r} box_background_color`" box-background-opacity="`{r} box_background_opacity`" box-border-color="`{r} box_border_color`"box-border-opacity="`{r} box_border_opacity`" box-border-style="`{r} box_border_style`" box-border-width="`{r} box_border_width`" box-padding="`{r} box_padding`" box-radius="`{r} box_radius`" box-shadow-color="`{r} box_shadow_color`" box-shadow-opacity="`{r} box_shadow_opacity`" box-shadow-x-offset="`{r} box_shadow_x_offset`" box-shadow-y-offset="`{r} box_shadow_y_offset`" box-shadow-blur-radius="`{r} box_shadow_blur_radius`" box-shadow-spread-radius="`{r} box_shadow_spread_radius`"}.
+
+### Text decoration
+
+Hear is [a text]{.style-text text-decoration-line="`{r} text_decoration_line`" text-decoration-style="`{r} text_decoration_style`" text-decoration-color="`{r} text_decoration_color`" text-decoration-thickness="`{r} text_decoration_thickness`"}, [an equation $E = m c^2$]{.style-text text-decoration-line="`{r} text_decoration_line`" text-decoration-style="`{r} text_decoration_style`" text-decoration-color="`{r} text_decoration_color`" text-decoration-thickness="`{r} text_decoration_thickness`"} and [a code `ls -al`]{.style-text text-decoration-line="`{r} text_decoration_line`" text-decoration-style="`{r} text_decoration_style`" text-decoration-color="`{r} text_decoration_color`" text-decoration-thickness="`{r} text_decoration_thickness`"}.
+
+### Text shadow
+
+Hear is [a text]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}, [an equation $E = m c^2$]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"} and [a code `ls -al`]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}.
+
+## Paragrah
+
+### Color
+
+::: {.style-text color="`{r} color`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+
+### Opacity
+
+::: {.style-text opacity="`{r} opacity`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+
+### Font
+
+::: {.style-text font="`{r} font`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+
+### Font Size
+
+::: {.style-text font-size="`{r} font_size`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+
+### Box
+
+::: {.style-text box-background-color="`{r} box_background_color`" box-background-opacity="`{r} box_background_opacity`" box-border-color="`{r} box_border_color`"box-border-opacity="`{r} box_border_opacity`" box-border-style="`{r} box_border_style`" box-border-width="`{r} box_border_width`" box-padding="`{r} box_padding`" box-radius="`{r} box_radius`" box-shadow-color="`{r} box_shadow_color`" box-shadow-opacity="`{r} box_shadow_opacity`" box-shadow-x-offset="`{r} box_shadow_x_offset`" box-shadow-y-offset="`{r} box_shadow_y_offset`" box-shadow-blur-radius="`{r} box_shadow_blur_radius`" box-shadow-spread-radius="`{r} box_shadow_spread_radius`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+
+### Text decoration
+
+Only supported in `html` output.
+
+::: {.content-visible when-format="html"}
+::: {.style-text text-decoration-line="`{r} text_decoration_line`" text-decoration-style="`{r} text_decoration_style`" text-decoration-color="`{r} text_decoration_color`" text-decoration-thickness="`{r} text_decoration_thickness`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+:::
+
+### Text shadow
+
+Only supported in `html` output.
+
+::: {.content-visible when-format="html"}
+::: {.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+:::
