@@ -293,7 +293,6 @@ function include_in_header_latex()
     \AtBeginDocument{\colorlet{style-text-box-border-color}{.}}
     \AtBeginDocument{\colorlet{style-text-box-background-color}{white}}
     \AtBeginDocument{\colorlet{style-text-box-shadow-color}{.}}
-    \AtBeginDocument{\colorlet{style-text-text-ducoration-color}{.}}
     \AtBeginDocument{\colorlet{style-text-text-shadow-color}{.}}
   ]])
 end
@@ -306,13 +305,12 @@ function latex_style(el, style_text_el_type, global_options)
   -- box
   if attributes["box-border-color"] or attributes["box-background-color"] then
     -- box background
-    local box_background_color_name = "style-text-box-background-color"
     local box_background_color_define = ""
     if attributes["box-background-color"] then
-      box_background_color_define = string.format("\\definecolor{%s}{HTML}{%s}", box_background_color_name, string.gsub(attributes["box-background-color"], "#", ""))
+      box_background_color_define = string.format("\\definecolor{style-text-box-background-color}{HTML}{%s}", string.gsub(attributes["box-background-color"], "#", ""))
       style_prefix = style_prefix .. box_background_color_define
     end
-    local box_background_color = string.format(",colframe=%s", box_background_color_name)
+    local box_background_color = ",colframe=style-text-box-background-color"
 
     local box_background_opacity = ""
     if attributes["box-background-opacity"] then
@@ -320,10 +318,9 @@ function latex_style(el, style_text_el_type, global_options)
     end
 
     -- box border
-    local box_border_color_name = "style-text-box-border-color"
     local box_border_color_define = ""
     if attributes["box-border-color"] then
-      box_border_color_define = string.format("\\definecolor{%s}{HTML}{%s}", box_border_color_name, string.gsub(attributes["box-border-color"], "#", ""))
+      box_border_color_define = string.format("\\definecolor{style-text-box-border-color}{HTML}{%s}", string.gsub(attributes["box-border-color"], "#", ""))
       style_prefix = style_prefix .. box_border_color_define
     end
 
@@ -378,10 +375,9 @@ function latex_style(el, style_text_el_type, global_options)
     box_radius = ",arc=" .. box_radius
 
     -- box shadow
-    local box_shadow_color_name = "style-text-box-shadow-color"
     local box_shadow_color_define = ""
     if attributes["box-shadow-color"] then
-      box_shadow_color_define = string.format("\\definecolor{%s}{HTML}{%s}", box_shadow_color_name, string.gsub(attributes["box-shadow-color"], "#", ""))
+      box_shadow_color_define = string.format("\\definecolor{style-text-box-shadow-color}{HTML}{%s}", string.gsub(attributes["box-shadow-color"], "#", ""))
       style_prefix = style_prefix .. box_shadow_color_define
     end
 
@@ -517,10 +513,9 @@ function latex_style(el, style_text_el_type, global_options)
 
   -- text shadow
   local text_shadow_opacity = 100
-  local text_shadow_color_name = "style-text-text-shadow-color"
   local text_shadow_color_define = ""
   if attributes["text-shadow-color"] then
-    text_shadow_color_define = string.format("\\definecolor{%s}{HTML}{%s}", text_shadow_color_name, string.gsub(attributes["text-shadow-color"], "#", ""))
+    text_shadow_color_define = string.format("\\definecolor{style-text-text-shadow-color}{HTML}{%s}", string.gsub(attributes["text-shadow-color"], "#", ""))
     style_prefix = style_prefix .. text_shadow_color_define
 
     if attributes["text-shadow-opacity"] then
