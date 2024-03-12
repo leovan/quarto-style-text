@@ -16,7 +16,7 @@ A Quarto extension to render style text for `html` and `pdf` document. It's base
 ## Installing
 
 ```bash
-quarto add leovan/style-text
+quarto add leovan/quarto-style-text
 ```
 
 This will install the extension under the `_extensions` subdirectory. If you're using version control, you will want to check in this directory.

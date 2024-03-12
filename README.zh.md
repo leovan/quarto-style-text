@@ -16,7 +16,7 @@
 ## 安装
 
 ```bash
-quarto add leovan/style-text
+quarto add leovan/quarto-style-text
 ```
 
 这将在 `_extensions` 子目录中安装本插件。如果使用版本控制，请检入到此目录。
