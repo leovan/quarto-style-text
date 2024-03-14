@@ -273,10 +273,20 @@ local function render_style_text_html(global_options)
 
   local filter = {
     Div = function(el)
-      return filter_html(el, "div", global_options)
+      if el.attr.classes:includes("style-text") then
+        global_options.style_text_current_index = global_options.style_text_current_index + 1
+        return filter_html(el, "div", global_options)
+      else
+        return el
+      end
     end,
     Span = function(el)
-      return filter_html(el, "span", global_options)
+      if el.attr.classes:includes("style-text") then
+        global_options.style_text_current_index = global_options.style_text_current_index + 1
+        return filter_html(el, "span", global_options)
+      else
+        return el
+      end
     end
   }
 
@@ -559,10 +569,20 @@ local function render_style_text_latex(global_options)
 
   local filter = {
     Div = function(el)
-      return filter_latex(el, "div", global_options)
+      if el.attr.classes:includes("style-text") then
+        global_options.style_text_current_index = global_options.style_text_current_index + 1
+        return filter_latex(el, "div", global_options)
+      else
+        return el
+      end
     end,
     Span = function(el)
-      return filter_latex(el, "span", global_options)
+      if el.attr.classes:includes("style-text") then
+        global_options.style_text_current_index = global_options.style_text_current_index + 1
+        return filter_latex(el, "span", global_options)
+      else
+        return el
+      end
     end
   }
 
@@ -570,22 +590,7 @@ local function render_style_text_latex(global_options)
 end
 
 local function render_style_text(global_options)
-  local filter = {
-    Div = function(el)
-      if el.attr.classes:includes("style-text") then
-        global_options.style_text_current_index = global_options.style_text_current_index + 1
-      else
-        return el
-      end
-    end,
-    Span = function(el)
-      if el.attr.classes:includes("style-text") then
-        global_options.style_text_current_index = global_options.style_text_current_index + 1
-      else
-        return el
-      end
-    end
-  }
+  local filter = {}
 
   if quarto.doc.is_format("html") then
     ensure_html_deps()

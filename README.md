@@ -77,7 +77,7 @@ Parameters for this extension are listed as below:
 
 > [!NOTE]
 >
-> 1. `em` is used as unit for All length, width and size.
+> 1. `em` is used as unit for all length, width and size.
 > 2. Color values should be in Hex format.
 > 3. Opacity values should be between 0 and 1.
 > 4. All decimal values should keep two decimal places at most.

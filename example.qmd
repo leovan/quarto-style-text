@@ -85,6 +85,12 @@ Hear is [a text]{.style-text text-decoration-line="`{r} text_decoration_line`" t
 
 Hear is [a text]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}, [an equation $E = m c^2$]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"} and [a code `ls -al`]{.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}.
 
+### Callout
+
+::: {.callout-note}
+Here is [a text]{.style-text color="`{r} color`"}, [an equation $E = m c^2$]{.style-text color="`{r} color`"} and [a code `ls -al`]{.style-text color="`{r} color`"}.
+:::
+
 ## Paragrah
 
 ### Color
@@ -181,6 +187,22 @@ Only supported in `html` output.
 
 ::: {.content-visible when-format="html"}
 ::: {.style-text text-shadow-color="`{r} text_shadow_color`" text-shadow-opacity="`{r} text_shadow_opacity`" text-shadow-x-offset="`{r} text_shadow_x_offset`" text-shadow-y-offset="`{r} text_shadow_y_offset`" text-shadow-blur-radius="`{r} text_shadow_blur_radius`"}
+Hear is a text, an equation:
+
+$$E = m c^2$$
+
+and a code:
+
+```bash
+ls -al
+```
+:::
+:::
+
+### Callout
+
+::: {.callout-note}
+::: {.style-text color="`{r} color`"}
 Hear is a text, an equation:
 
 $$E = m c^2$$
