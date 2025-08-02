@@ -8,7 +8,7 @@
 
 🇺🇸 [README](README.md) | 🇨🇳 [中文说明](README.zh.md)
 
-一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。其基于带有 `.style-text` 类的 [Divs 和 Spans](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) 实现。
+一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。其基于带有 `.style-text` 类的 [Divs 和 Spans](https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans) 实现。
 
 > [!CAUTION]
 > 不支持 `pdflatex` PDF 引擎。
@@ -90,4 +90,4 @@ filters:
 
 The MIT License (MIT)
 
-Copyright (c) 2024 [范叶亮 | Leo Van](https://leovan.me)
+Copyright (c) 2024-2025 [范叶亮 | Leo Van](https://leovan.me)

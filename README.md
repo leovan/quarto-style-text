@@ -8,7 +8,7 @@
 
 🇺🇸 [README](README.md) | 🇨🇳 [中文说明](README.zh.md)
 
-A Quarto extension to render style text for `html` and `pdf` document. It's based on [Divs and Spans](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) with `.style-text` class.
+A Quarto extension to render style text for `html` and `pdf` document. It's based on [Divs and Spans](https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans) with `.style-text` class.
 
 > [!CAUTION]
 > `pdflatex` PDF engine is not supported.
@@ -90,4 +90,4 @@ Here is the source code for a minimal example: [example.qmd](example.qmd).
 
 The MIT License (MIT)
 
-Copyright (c) 2024 [范叶亮 | Leo Van](https://leovan.me)
+Copyright (c) 2024-2025 [范叶亮 | Leo Van](https://leovan.me)
